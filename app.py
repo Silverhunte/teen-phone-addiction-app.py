@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import joblib
+import joblib as jb
 
 # Load models
 scaler = joblib.load("scaler.pkl")
@@ -45,4 +45,5 @@ if st.button("Predict Addiction Level"):
 
     # Final verdict
     st.markdown("---")
+
     st.subheader(f"🧠 Ensemble Verdict: {'🟥 Addicted' if final_vote == 1 else '🟩 Not Addicted'}")
